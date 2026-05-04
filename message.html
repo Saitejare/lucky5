@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Message 💌</title>
+
+<style>
+
+*{
+box-sizing:border-box;
+}
+
+body{
+margin:0;
+font-family:'Segoe UI',sans-serif;
+background:url("images/image.png")
+center/contain no-repeat fixed;
+color:white;
+text-align:center;
+min-height:100vh;
+}
+
+.overlay{
+position:fixed;
+inset:0;
+background:
+linear-gradient(135deg,rgba(12,10,26,0.88),rgba(121,26,77,0.72)),
+radial-gradient(circle at 15% 15%,rgba(255,193,7,0.2),transparent 32%);
+z-index:-1;
+}
+
+.message{
+max-width:760px;
+margin:0 auto;
+padding:84px 22px 52px;
+font-size:22px;
+line-height:1.8;
+}
+
+.message h1{
+font-size:58px;
+margin:0 0 24px;
+background:linear-gradient(45deg,#fff,#ff85ad,#ffc107);
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
+filter:drop-shadow(0 12px 30px rgba(0,0,0,0.38));
+}
+
+.message-card{
+background:rgba(255,255,255,0.13);
+border:1px solid rgba(255,255,255,0.22);
+border-radius:18px;
+box-shadow:0 24px 70px rgba(0,0,0,0.42);
+backdrop-filter:blur(16px);
+margin:0 auto 30px;
+padding:28px;
+}
+
+.message-card p{
+margin:0 0 20px;
+}
+
+.message-card p:last-child{
+margin-bottom:0;
+}
+
+.signature{
+color:#ffe0ec;
+font-weight:700;
+}
+
+.next{
+padding:14px 30px;
+background:linear-gradient(135deg,#ff4081,#ff9f1c);
+color:white;
+text-decoration:none;
+border-radius:999px;
+display:inline-block;
+font-weight:700;
+box-shadow:0 12px 30px rgba(255,64,129,0.35);
+transition:transform 0.2s ease,box-shadow 0.2s ease;
+}
+
+.next:hover{
+transform:translateY(-2px);
+box-shadow:0 16px 34px rgba(255,64,129,0.48);
+}
+
+@media (max-width:520px){
+.message{
+font-size:18px;
+padding-top:56px;
+}
+
+.message h1{
+font-size:38px;
+}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="overlay"></div>
+
+<div class="message">
+
+<h1>💌 Special Message</h1>
+
+<div class="message-card">
+
+<p>Happy Birthday to someone truly special 🎉💛</p>
+
+<p>
+You bring a different kind of energy to our group - the kind that makes everything feel lighter, happier, and more alive. Every moment with you turns into a memory we end up talking about again and again.
+</p>
+
+<p>
+May this year surprise you with happiness, success, and everything you've been hoping for. Stay the amazing person you are - we're always right here beside you.
+</p>
+
+<p class="signature">
+With lots of love,<br>
+Your forever gang 💫
+</p>
+
+</div>
+
+<br>
+
+<a href="gallery.html"
+class="next">
+
+Next → Gallery 📸
+
+</a>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Special Video 🎥</title>
+
+<style>
+
+*{
+box-sizing:border-box;
+}
+
+body{
+
+margin:0;
+
+font-family:'Segoe UI',sans-serif;
+
+background:url("assets/background.jpg")
+center/contain no-repeat fixed;
+
+color:white;
+
+text-align:center;
+min-height:100vh;
+
+}
+
+.overlay{
+position:fixed;
+inset:0;
+background:
+linear-gradient(180deg,rgba(9,8,20,0.82),rgba(72,16,51,0.72)),
+radial-gradient(circle at 20% 12%,rgba(255,193,7,0.18),transparent 30%);
+z-index:-1;
+}
+
+h1{
+font-size:58px;
+margin:58px 18px 0;
+background:linear-gradient(45deg,#fff,#ff85ad,#ffc107);
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
+filter:drop-shadow(0 12px 30px rgba(0,0,0,0.38));
+}
+
+.video-box{
+
+width:min(90vw,780px);
+
+margin:38px auto 28px;
+
+border-radius:18px;
+
+overflow:hidden;
+
+background:#000;
+border:1px solid rgba(255,255,255,0.2);
+box-shadow:0 24px 70px rgba(0,0,0,0.55);
+
+}
+
+.play-button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:0.75rem;
+  width:min(84%,420px);
+  margin:42px auto;
+  padding:18px 26px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,0.24);
+  background:rgba(255,255,255,0.08);
+  color:#ffffff;
+  font-size:22px;
+  text-decoration:none;
+  transition:transform .2s ease, background .2s ease, box-shadow .2s ease;
+  box-shadow:0 18px 40px rgba(0,0,0,0.2);
+}
+
+.play-button:hover{
+  transform:translateY(-2px);
+  background:rgba(255,255,255,0.15);
+}
+
+.play-button span{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#ff85ad,#ffc107);
+  box-shadow:0 12px 24px rgba(255,133,173,0.28);
+}
+
+.end{
+
+font-size:32px;
+
+margin:16px auto 44px;
+padding:0 18px;
+
+color:#ffc107;
+text-shadow:0 10px 28px rgba(0,0,0,0.42);
+
+}
+
+@media (max-width:520px){
+h1{
+font-size:36px;
+}
+
+.end{
+font-size:23px;
+}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="overlay"></div>
+
+<h1>🎉 Special For You 🎉</h1>
+
+<div class="video-box">
+  <a class="play-button" href="https://drive.google.com/file/d/1c1JNyLmIeCqXN5bOyQPcmVZStnZnrK3s/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+    <span>▶</span>
+    Play Video on Google Drive
+  </a>
+</div>
+
+<div class="end">
+
+✨ Once Again Happy Birthday 🎂 ✨
+
+</div>
+
+</body>
+</html>
