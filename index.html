@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Unlock 🎂</title>
+
+<style>
+
+*{
+box-sizing:border-box;
+}
+
+body{
+margin:0;
+font-family:'Segoe UI',sans-serif;
+
+background:url("images/image.png")
+center/contain no-repeat fixed;
+
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+height:100vh;
+color:#fff;
+overflow:hidden;
+}
+
+.overlay{
+position:fixed;
+inset:0;
+background:
+linear-gradient(135deg,rgba(15,13,34,0.88),rgba(98,24,71,0.7)),
+radial-gradient(circle at top left,rgba(255,193,7,0.22),transparent 34%);
+}
+
+.card{
+
+position:relative;
+
+background:rgba(255,255,255,0.14);
+
+padding:34px 28px;
+
+border:1px solid rgba(255,255,255,0.26);
+border-radius:18px;
+
+box-shadow:0 24px 70px rgba(0,0,0,0.45);
+backdrop-filter:blur(18px);
+
+text-align:center;
+
+width:min(92vw,390px);
+z-index:2;
+
+}
+
+h1{
+margin-bottom:20px;
+font-size:30px;
+line-height:1.15;
+text-shadow:0 8px 28px rgba(0,0,0,0.35);
+}
+
+input{
+
+width:76px;
+height:55px;
+
+font-size:18px;
+font-weight:700;
+
+margin:5px;
+
+border-radius:12px;
+
+border:1px solid rgba(255,255,255,0.42);
+background:rgba(255,255,255,0.92);
+color:#2a1434;
+
+text-align:center;
+outline:none;
+
+box-shadow:inset 0 1px 0 rgba(255,255,255,0.8);
+
+}
+
+input:focus{
+border-color:#ffc107;
+box-shadow:0 0 0 4px rgba(255,193,7,0.22);
+}
+
+button{
+
+margin-top:15px;
+
+padding:13px 28px;
+
+background:linear-gradient(135deg,#ff4081,#ff9f1c);
+
+color:white;
+
+border:none;
+
+border-radius:999px;
+
+font-size:16px;
+font-weight:700;
+
+cursor:pointer;
+box-shadow:0 12px 30px rgba(255,64,129,0.35);
+transition:transform 0.2s ease,box-shadow 0.2s ease;
+
+}
+
+button:hover{
+transform:translateY(-2px);
+box-shadow:0 16px 34px rgba(255,64,129,0.48);
+}
+
+@media (max-width:420px){
+input{
+width:68px;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="overlay"></div>
+
+<div class="card">
+
+<h1>🔐 Unlock Birthday</h1>
+
+<input id="d" placeholder="DD">
+<input id="m" placeholder="MM">
+<input id="y" placeholder="YYYY">
+
+<br>
+
+<button onclick="unlock()">
+
+Unlock 🎉
+
+</button>
+
+</div>
+
+<audio id="bell">
+<source src="assets/bell.mp3">
+</audio>
+
+<script>
+
+function unlock(){
+
+let d=document.getElementById("d").value;
+let m=document.getElementById("m").value;
+let y=document.getElementById("y").value;
+
+if(d=="05" && m=="05" && y=="2005"){
+
+document.getElementById("bell").play();
+
+/* Auto redirect */
+setTimeout(()=>{
+
+window.location="home.html";
+
+},800);
+
+}
+else{
+
+alert("Wrong Birthday ❌");
+
+}
+
+}
+
+["d","m","y"].forEach((id) => {
+  document.getElementById(id).addEventListener("input", () => {
+    let d=document.getElementById("d").value;
+    let m=document.getElementById("m").value;
+    let y=document.getElementById("y").value;
+
+    if(d.length==2 && m.length==2 && y.length==4){
+      unlock();
+    }
+  });
+});
+
+</script>
+
+</body>
+</html>
