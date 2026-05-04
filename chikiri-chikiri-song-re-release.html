@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Chikiri Chikiri Song Re-Release �</title>
+
+<style>
+
+*{
+box-sizing:border-box;
+}
+
+body{
+
+margin:0;
+
+font-family:'Segoe UI',sans-serif;
+
+background:url("assets/background.jpg")
+center/contain no-repeat fixed;
+
+color:white;
+
+text-align:center;
+min-height:100vh;
+
+}
+
+.overlay{
+position:fixed;
+inset:0;
+background:
+linear-gradient(180deg,rgba(9,8,20,0.82),rgba(72,16,51,0.72)),
+radial-gradient(circle at 20% 12%,rgba(255,193,7,0.18),transparent 30%);
+z-index:-1;
+}
+
+h1{
+font-size:58px;
+margin:58px 18px 0;
+background:linear-gradient(45deg,#fff,#ff85ad,#ffc107);
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
+filter:drop-shadow(0 12px 30px rgba(0,0,0,0.38));
+}
+
+.video-box{
+
+width:90%;
+
+max-width:560px;
+
+margin:38px auto 28px;
+
+border-radius:18px;
+
+overflow:hidden;
+
+background:#000;
+border:1px solid rgba(255,255,255,0.2);
+box-shadow:0 24px 70px rgba(0,0,0,0.55);
+
+}
+
+video {
+  width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  display: block;
+  border-radius: 18px;
+}
+
+.end{
+
+font-size:32px;
+
+margin:16px auto 44px;
+padding:0 18px;
+
+color:#ffc107;
+text-shadow:0 10px 28px rgba(0,0,0,0.42);
+
+}
+
+@media (max-width:520px){
+h1{
+font-size:36px;
+}
+
+.end{
+font-size:23px;
+}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="overlay"></div>
+
+<h1>🎉 Chikiri Chikiri Song Re-Release 🎉</h1>
+
+<div class="video-box">
+  <video controls>
+    <source src="videos/sanju1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+<div class="end">
+
+✨ Enjoy the Video 🎥 ✨
+
+</div>
+
+</body>
+</html>

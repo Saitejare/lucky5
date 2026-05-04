@@ -161,7 +161,7 @@ font-size:26px;
 
 <div class="video-box">
 
-<video id="birthdayVideo" autoplay muted playsinline preload="auto" controls>
+<video id="birthdayVideo" autoplay playsinline preload="auto" controls>
 
 <source
 src="videos/Untitled-.mp4"
@@ -185,13 +185,6 @@ const birthdayVideo = document.getElementById('birthdayVideo');
 
 birthdayVideo.play().catch(() => {
   birthdayVideo.controls = true;
-});
-
-birthdayVideo.addEventListener('timeupdate', () => {
-  if (birthdayVideo.currentTime >= 7) {
-    birthdayVideo.pause();
-    birthdayVideo.currentTime = 0;
-  }
 });
 </script>
 
