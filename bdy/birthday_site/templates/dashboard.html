@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+</head>
+<body class="gradient-bg">
+    <header class="topbar">
+        <div>
+            <p class="eyebrow">Welcome</p>
+            <h1>Happy Birthday, {{ username }}!</h1>
+        </div>
+        <a class="ghost-link" href="{{ url_for('logout') }}">Logout</a>
+    </header>
+
+    <main class="dashboard-grid">
+        <a class="card nav-card" href="{{ url_for('countdown') }}">
+            <h2>Countdown</h2>
+            <p>Watch the timer tick down to the big celebration.</p>
+        </a>
+        <a class="card nav-card" href="{{ url_for('slideshow') }}">
+            <h2>Slideshow</h2>
+            <p>Showcase favorite photos with a simple animated gallery.</p>
+        </a>
+        <a class="card nav-card" href="{{ url_for('wishes') }}">
+            <h2>Wishes</h2>
+            <p>Collect warm birthday messages in one cozy place.</p>
+        </a>
+    </main>
+</body>
+</html>

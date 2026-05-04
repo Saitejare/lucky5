@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Wishes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+</head>
+<body class="gradient-bg">
+    <main class="page-shell">
+        <section class="card wishes-card">
+            <p class="eyebrow">Wishes</p>
+            <h1>Messages for the star of the day</h1>
+            <div class="wish-list">
+                {% for note in notes %}
+                <article class="wish-item">
+                    <p>{{ note }}</p>
+                </article>
+                {% endfor %}
+            </div>
+            
+            <div class="message-form">
+                <h2>Send a Message 💌</h2>
+                <p class="subtext">Write a personal message that will be sent to the birthday person via email.</p>
+                <form action="{{ url_for('send_message') }}" method="POST">
+                    <textarea name="message" placeholder="Write your birthday message here..." rows="4" required></textarea>
+                    <button type="submit">Send Message 💌</button>
+                </form>
+            </div>
+            
+            <a class="ghost-link" href="{{ url_for('dashboard') }}">Back to dashboard</a>
+        </section>
+    </main>
+</body>
+</html>

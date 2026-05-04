@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Slideshow</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+</head>
+<body class="gradient-bg">
+    <main class="page-shell">
+        <section class="card slideshow-card">
+            <p class="eyebrow">Slideshow</p>
+            <h1>Memory lane</h1>
+            <div class="slideshow-container">
+                {% for slide in slides %}
+                <figure class="slide {% if loop.first %}active{% endif %}">
+                    <img src="{{ slide.image }}" alt="Birthday memory {{ loop.index }}">
+                    <figcaption>{{ slide.caption }}</figcaption>
+                </figure>
+                {% endfor %}
+            </div>
+            <div class="inline-actions">
+                <button id="prevBtn" type="button">Previous</button>
+                <button id="nextBtn" type="button">Next</button>
+            </div>
+            <p class="subtext">The included image files are placeholders. Swap in your real photos in <code>static/images</code>.</p>
+            <audio controls class="audio-player">
+                <source src="{{ url_for('static', filename='music/birthday.mp3') }}" type="audio/mpeg">
+                Your browser does not support audio playback.
+            </audio>
+            <a class="ghost-link" href="{{ url_for('dashboard') }}">Back to dashboard</a>
+        </section>
+    </main>
+    <script src="{{ url_for('static', filename='js/slideshow.js') }}"></script>
+</body>
+</html>
